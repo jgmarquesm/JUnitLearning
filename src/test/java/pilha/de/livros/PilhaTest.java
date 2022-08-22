@@ -3,14 +3,16 @@ package pilha.de.livros;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
 
-class PilhaTest {
+public class PilhaTest {
 
     private static Pilha pilha;
+    static IPilhaDAO pilhaDAO = mock(IPilhaDAO.class);
 
     @BeforeAll
     public static void setUpBeforeClass() {
-        pilha = new Pilha();
+        pilha = new Pilha(pilhaDAO);
     }
 
     @BeforeEach
@@ -61,5 +63,11 @@ class PilhaTest {
         Livro livro = pilha.pop();
 
         assertEquals("Os indesejáveis", livro.getTitulo());
+    }
+
+    @Test
+    @DisplayName("Teste de Limite")
+    void testLimiteDaPilha(){
+        assertEquals(5, pilha.getLimite());
     }
 }
