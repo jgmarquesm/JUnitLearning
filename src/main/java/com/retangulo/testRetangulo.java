@@ -1,4 +1,4 @@
-package retangulo;
+package com.retangulo;
 
 public class testRetangulo {
 

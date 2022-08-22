@@ -1,4 +1,4 @@
-package calculadora;
+package com.calculadora;
 
 public class testCalculadora {
 
@@ -8,10 +8,10 @@ public class testCalculadora {
 
         // Arrange
         calculadora = new Calculadora();
-        int resultadoEsperado = 10;
+        double resultadoEsperado = 10;
 
         // Act
-        int resultado = calculadora.somar(7, 3);
+        double resultado = calculadora.somar(7, 3);
 
         // Assert
         if (resultado == resultadoEsperado){

@@ -1,4 +1,4 @@
-package retangulo;
+package com.retangulo;
 
 public class Retangulo {
 
@@ -15,6 +15,6 @@ public class Retangulo {
     }
 
     public double perimetro(){
-        return 2*(base + altura) + 1;
+        return 2*(base + altura);
     }
 }

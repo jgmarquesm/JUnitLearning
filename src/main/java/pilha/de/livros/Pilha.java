@@ -13,13 +13,15 @@ public class Pilha {
     ArrayList<Livro> pilhaDeLivros = new ArrayList<>();
 
     public void push(Livro livro){
-        if (pilhaDeLivros.size() >= limite){ return;}
-        if (!livro.getTitulo().startsWith("A") && !livro.getTitulo().startsWith("O")){return;}
+        if (pilhaDeLivros.size() >= limite){ throw new ArrayStoreException();}
+        if (!livro.getTitulo().startsWith("A") && !livro.getTitulo().startsWith("O")){ return;}
         pilhaDeLivros.add(livro);
     }
 
-    public String pop(){
-        return pilhaDeLivros.get(pilhaDeLivros.size()-1).getTitulo();
+    public Livro pop(){
+        Livro livro = pilhaDeLivros.get(pilhaDeLivros.size()-1);
+        pilhaDeLivros.remove(pilhaDeLivros.size()-1);
+        return livro;
     }
 
     public int count(){
