@@ -1,0 +1,6 @@
+Implementar um estrutura de dados do tipo pilha (LIFO).
+Usar para implementar uma pilha de livros, e essa pilha de livros deve conter no máximo 5 livros
+que devem, exclusivamente, ter o título começando com 'A' ou 'O'.
+- Método push(livro): add livro na "última" posição da pilha;
+- Método pop(): retira o último livro inserido na pilha;
+
